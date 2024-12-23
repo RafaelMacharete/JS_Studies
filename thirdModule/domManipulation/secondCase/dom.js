@@ -2,13 +2,11 @@ function clicou(){
     const teste = document.querySelector('#teste');
     const ul = teste.querySelector('#teste ul');
 
-    /*
-    console.log(ul.innerHTML); // Mostra o conteúdo da tag HTML
-    ul.innerHTML +=  "<li>Conteúdo alterado</li>"; // Altera o conteúdo interno do <ul>
-    */
+    // ul.children[0].append("(Alterado!)"); // Não reprocessa todos os elementos!
+    // ul.children[0].innerHTML += ("(Alterado!)"); // Reprocessa todos os elementos!
+    // ul.append("Alterado") // Adiciona um texto
+    let newLi = document.createElement('li'); // Adiciona um elemento
+    newLi.innerHTML = "Item Adicionado!";
 
-    const li = ul.querySelectorAll('li');
-    li.forEach(element => {
-        element.innerHTML = "Alterando o conteúdo!";
-    });
+    ul.appendChild(newLi);
 }
