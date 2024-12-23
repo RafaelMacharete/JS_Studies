@@ -1,14 +1,12 @@
-function apertou(){
-    console.log('Apertou!');    
+function soltou(event){
+    console.log(event.code);
+    if(event.code == 'Enter'){
+        console.log("apertou enter");
+    }else{
+        console.log('não apertou enter')
+    }
 }
 
-function segurou(){
-    console.log('Segurou!');    
-}
-
-function soltou(){
-    console.log('Soltou!');    
-}
-
-document.addEventListener('submit', soltou);
+const input = document.querySelector('input');
+input.addEventListener('keyup', soltou);
 
