@@ -1,5 +1,5 @@
 class Character{
-
+    // Criando o modelo
     _life = 1;
     maxLife = 1;
     attack = 0;
@@ -41,7 +41,7 @@ class Sorcerer extends Character{
 
 class littleMonster extends Character{
     constructor(){
-        super('Little monster');
+        super('Little monster'); // já 
         this.life = 40;
         this.attack = 4;
         this.defense = 4;
@@ -69,7 +69,8 @@ class Stage{
 
     start(){
         this.update();
-        // TODO: Evento do botão de atacar.
+
+        // this.fgihter1El.querySelector('.attackButton').addEventListener('click', () =>)
     }
     
     update(){
