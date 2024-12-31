@@ -41,7 +41,7 @@ class Sorcerer extends Character{
 
 class littleMonster extends Character{
     constructor(){
-        super('Little monster'); // já 
+        super('Little monster'); // nome do objeto
         this.life = 40;
         this.attack = 4;
         this.defense = 4;
@@ -51,7 +51,7 @@ class littleMonster extends Character{
 
 class bigMonster extends Character{
     constructor(){
-        super('Big Monster');
+        super('Big Monster'); // nome do objeto
         this.life = 120;
         this.attack = 16;
         this.defense = 6;
@@ -81,7 +81,7 @@ class Stage{
         let f1Pct = (this.fighter1.life / this.fighter1.maxLife) * 100;
         this.fighter1El.querySelector('.bar').style.width = `${f1Pct}%`;
 
-        this.fighter1El.querySelector(".bar").style.backgroundColor =
+        this.fighter1El.querySelector(".bar").style.backgroundColor = // troca a cor da barra de acordo com a porcentagem da vida
             f1Pct >= 50 ? '#0f0' :
             f1Pct >= 25 ? '#ff0' : '#f00';
         
@@ -90,7 +90,7 @@ class Stage{
         let f2Pct = (this.fighter2.life / this.fighter2.maxLife) * 100;
         this.fighter2El.querySelector('.bar').style.width = `${f2Pct}%`;
 
-        this.fighter2El.querySelector(".bar").style.backgroundColor =
+        this.fighter2El.querySelector(".bar").style.backgroundColor = // troca a cor da barra de acordo com a porcentagem da vida
             f2Pct >= 50 ? '#0f0' :
             f2Pct >= 25 ? '#ff0' : '#f00';
         
