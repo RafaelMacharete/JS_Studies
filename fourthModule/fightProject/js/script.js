@@ -1,3 +1,5 @@
+let log
+
 let char = new Knight("Leafar");
 let monster = new littleMonster();
 
