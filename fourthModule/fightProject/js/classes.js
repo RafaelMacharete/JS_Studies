@@ -53,7 +53,7 @@ class bigMonster extends Character{
     constructor(){
         super('Big Monster'); // nome do objeto
         this.life = 120;
-        this.attack = 16;
+        this.attack = 13;
         this.defense = 6;
         this.maxLife = this.life
     }
