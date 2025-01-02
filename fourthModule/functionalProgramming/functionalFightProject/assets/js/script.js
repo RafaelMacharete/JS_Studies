@@ -1,4 +1,4 @@
-const char = createSorcerer('Rafael');
+const char = createSorcererz('Rafael');
 const monster = createBigMonster();
 
 stage.start(
