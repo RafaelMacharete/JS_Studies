@@ -1,33 +1,22 @@
 // https://jsonplaceholder.typicode.com/posts
 
 // Promise = Promessa
+// Get - Pegar
+// Post - Postar/Inserir um dado novo
+// Put - Alterar um dado que já existe
+// Delete - Exclui
 
-function clicou() {
-    // GET, POST, PUT, DELETE
-    // Get - Pegar
-    // Post - Postar/Inserir um dado novo
-    // Put - Alterar um dado que já existe
-    // Delete - Exclui
+async function clicou() {
     // fetch é uma função do JS para realizar as requisições
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then((response) => {
-            console.log(`Status: ${response.status}`)
-            return response.json();
-        })
-        .then((json) => {
-            alert(json[0].title);
-        })
-        .catch((error) => { // "Tratamento" de erro
-            alert('Ocorreu um erro na requisição!');
-            console.log(error)
-        })
-        .finally(() => {
-            alert('Opa, acabou tudo')
-        })
+    let response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    let json = await response.json();
+
+    alert(`Título do primeiro post: ${json[0].title}`);
+    alert('Clicou');
 }
 
-function inserir() {
-    fetch(
+async function inserir() {
+    let reponse = await fetch(
         'https://jsonplaceholder.typicode.com/posts',
         {
             method: 'POST',
@@ -40,12 +29,9 @@ function inserir() {
                 userId: 2
             })
         })
-        .then((response) => {
-            return response.json();
-        })
-        .then((json) => {
-            console.log(json);
-        })
+        
+    let json = await reponse.json();
+    console.log(json);     
 }
 
 document.querySelector('#botao').addEventListener('click', clicou);
