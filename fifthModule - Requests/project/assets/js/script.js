@@ -33,7 +33,7 @@ async function addNewPost(title, body) {
                 userId: 2
             })
         }
-    );
+    );''
     document.querySelector('#titleField').value = '';
     document.querySelector('#bodyField').value = '';
 
